@@ -93,7 +93,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 print("🚀 开始图对比学习 (SimCLR)...")
 
-for epoch in range(2000): # 对比学习通常需要更久
+for epoch in range(1000): # 对比学习通常需要更久
     model.train()
     total_loss = 0
     

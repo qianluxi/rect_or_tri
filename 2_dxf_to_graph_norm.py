@@ -134,8 +134,8 @@ if __name__ == "__main__":
     for f in files:
         if not f.endswith(".dxf"): continue
         
-        # 标签逻辑：矩形=1，三角形=0
-        label = 1 if "rect" in f else 0
+        # 标签逻辑：墙=1，柱=0
+        label = 1 if "thin" in f else 0
         path = os.path.join(DXF_DIR, f)
         
         graph = process_dxf_normalized(path, label)

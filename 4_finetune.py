@@ -53,7 +53,7 @@ train_subset = dataset[:1000]
 labels = [data.y.item() for data in train_subset]
 num_tri = labels.count(0)
 num_rect = labels.count(1)
-print(f"📊 微调样本分布: 三角形={num_tri}, 矩形={num_rect}")
+print(f"📊 微调样本分布: 柱={num_tri}, 墙={num_rect}")
 if num_tri == 0 or num_rect == 0:
     print("⚠️ 警告：样本极度不平衡，训练将失败！")
 
